@@ -39,7 +39,6 @@
     {
       "matchUpdateTypes": [
         "minor",
-        "patch",
         "pin",
         "digest",
         "major"
