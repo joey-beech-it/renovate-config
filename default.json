@@ -32,7 +32,7 @@
       "matchUpdateTypes": [
         "patch"
       ],
-      "matchPackagePrefixes": [
+      "matchPackagePatterns": [
         "*"
       ],
       "excludePackagePatterns": ["^typo3/cms-"],
