@@ -21,6 +21,25 @@
   "packageRules": [
     {
       "matchUpdateTypes": [
+        "minor",
+        "pin",
+        "digest",
+        "major"
+      ],
+      "enabled": false
+    },
+    {
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "matchPackagePrefixes": [
+        "*"
+      ],
+      "excludePackagePatterns": ["^typo3/cms-"],
+      "enabled": false
+    },
+    {
+      "matchUpdateTypes": [
         "patch"
       ],
       "matchPackagePrefixes": [
@@ -33,16 +52,8 @@
       "groupName": "TYPO3 CMS",
       "labels": [
         "typo3"
-      ]
-    },
-    {
-      "matchUpdateTypes": [
-        "minor",
-        "pin",
-        "digest",
-        "major"
       ],
-      "enabled": false
+      "enabled": true
     }
   ]
 }
