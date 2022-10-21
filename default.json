@@ -3,7 +3,8 @@
   "extends": [
     "config:base",
     ":disableDependencyDashboard",
-    ":separatePatchReleases"
+    ":separatePatchReleases",
+    ":preserveSemverRanges"
   ],
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
@@ -14,7 +15,7 @@
     "composer"
   ],
   "separateMinorPatch": true,
-  "commitMessagePrefix": "[TASK] ",
+  "commitMessagePrefix": "[#0] ",
   "commitMessageTopic": "{{depName}}",
   "commitMessageExtra": " ({{{displayFrom}}} => {{{displayTo}}})",
   "rangeStrategy": "update-lockfile",
@@ -38,10 +39,12 @@
     {
       "matchUpdateTypes": [
         "minor",
+        "patch",
         "pin",
         "digest",
         "major"
       ],
+      "automerge": false,
       "enabled": false
     }
   ]
